@@ -5,7 +5,7 @@ An AWS Glue Docker Container with PySpark for Local Development and Testing.
 Start by building the Docker Image:
 
 ```commandline
-docker buid -t awsglue .
+docker build -t awsglue .
 ```
 
 This may take a while when the GLue Libraries are being set up. Next, start the container:
