@@ -23,6 +23,5 @@ ENV PATH=$PATH:$MAVEN_HOME/bin:/opt/spark/bin:/usr/lib/jvm/java-1.8.0-amazon-cor
 WORKDIR aws-glue-libs
 RUN bash -l -c 'bash bin/glue-setup.sh'
 
-COPY scripts/* scripts/
-
-
+COPY main.py .
+COPY data/* data/

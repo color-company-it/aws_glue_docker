@@ -18,7 +18,7 @@ You will be in the `aws-glue-libs` working directory where Glue is available to 
 Run your scripts using:
 
 ```commandline
-spark-submit scripts/main.py
+spark-submit main.py
 ```
 
 ONce complete, remember to remove the contaier:

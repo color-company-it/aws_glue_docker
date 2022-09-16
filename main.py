@@ -1,16 +1,16 @@
-from awsglue.context import GlueContext
+# from awsglue.context import GlueContext
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql import functions as f
 from pyspark.sql import types as t
 
 
 def main():
-    spark: SparkSession = SparkSession.builder.appName("glue").getOrCreate()
-    glue: GlueContext = GlueContext(spark)
+    spark: SparkSession = SparkSession.builder.getOrCreate()
+    # glue: GlueContext = GlueContext(spark)
 
     # consume data
-    data_frame1: DataFrame = spark.read.json("data/dataset1.json")
-    data_frame2: DataFrame = spark.read.json("data/dataset2.json")
+    data_frame1: DataFrame = spark.read.json("./data/dataset1.json")
+    data_frame2: DataFrame = spark.read.json("./data/dataset2.json")
 
     # clean up data
     data_frame_union: DataFrame = data_frame1.union(data_frame2)
